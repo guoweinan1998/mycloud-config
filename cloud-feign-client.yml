@@ -5,9 +5,9 @@ spring:
 --- 
 
 server:
-  port: 9201
+  port: 9301
   
-
+#需要开启feign  面向接口的方式添加 对服务降级的支持 fallback 字段  映射了对应的接口类实现的 fallbackfactory 接口 并且引入了maven  feign的jar包  
 feign: 
   hystrix: 
     enabled: true
