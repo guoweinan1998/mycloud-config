@@ -6,7 +6,7 @@ spring:
 ---
 
 server:
-    port: 9401
+    port: 8101
 
 spring: 
     application:
