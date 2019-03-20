@@ -4,7 +4,7 @@ spring:
       - dev
 --- 
 server:
-  port: 9101 #eureka server 注册端口
+  port: 7001 #eureka server 注册端口
 
 spring: 
   profile: dev
