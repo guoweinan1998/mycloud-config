@@ -1,12 +1,12 @@
 spring: 
-    profile: 
-        active: 
-	    - dev
+  profile: 
+    active: 
+      - dev
 
 ---
 
 server:
-    port: 8101
+    port: 8001
 
 spring: 
   profiles: dev
@@ -18,7 +18,7 @@ eureka:
     service-url:
       defaultZone: http://localhost:7001/eureka/
     instance:
-      instance-id: cloud-zuul-9401
+      instance-id: cloud-zuul-8001
       prefer-ip-address: true
 
 
