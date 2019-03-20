@@ -1,0 +1,37 @@
+spring: 
+    profile: 
+        active: 
+	    - dev
+
+---
+
+server:
+    port: 9401
+
+spring: 
+    application:
+	name: cloud-zuul
+
+eureka:
+    client: 
+	service-url:
+	defaultZone: http://localhost:7001/eureka/
+    instance:
+	instance-id: cloud-zuul-9401
+	prefer-ip-address: true
+
+
+zuul:
+    predix: /zuul
+    ignored-services: "*"
+    routes:
+	mydept.serviceId: cloud-eureka-client
+	mydept.path: /mycloud/**
+
+info:
+  app.name: atguigu-microcloud
+  company.name: www.atguigu.com
+  build.artifactId: $project.artifactId$
+  build.version: $project.version$
+
+
